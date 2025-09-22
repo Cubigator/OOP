@@ -26,6 +26,7 @@ public class Wallet
     public Wallet()
     {
         _coins = new List<Coin>();
+        _balance = 0;
     }
 
     public void AddCoin(decimal denomination)
@@ -39,5 +40,13 @@ public class Wallet
         Coin coin = _coins.First(x => x.Denomination == denomination);
         _coins.Remove(coin);
         _balance -= denomination;
+    }
+
+    public List<Coin> RemoveAllCoins()
+    {
+        List<Coin> buffer = new List<Coin>(_coins);
+        _coins.Clear();
+        _balance = 0;
+        return buffer;
     }
 }
