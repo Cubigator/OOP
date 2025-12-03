@@ -118,5 +118,5 @@ public class CrossBow : Weapon
         }
     }
     
-    public static Builder CrossBowBuilder = new Builder();
+    public static Builder CrossBowBuilder => new Builder();
 }

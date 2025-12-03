@@ -6,7 +6,6 @@ public abstract class Weapon : Item
     private double _reloadConst;
     private double _actionRadiusConst;
     private int _usageLimit;
-    private int _level;
 
     protected double DamageConst
     {
@@ -47,16 +46,6 @@ public abstract class Weapon : Item
             {
                 _usageLimit = value;
             }
-        }
-    }
-
-    public int Level
-    {
-        get => _level;
-        set
-        {
-            if(value > 0)
-                _level = value;
         }
     }
 }

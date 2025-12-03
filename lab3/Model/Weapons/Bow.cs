@@ -97,5 +97,5 @@ public class Bow : Weapon
         }
     }
     
-    public static Builder BowBuilder = new Builder();
+    public static Builder BowBuilder => new Builder();
 }
