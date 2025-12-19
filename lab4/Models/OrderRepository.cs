@@ -2,9 +2,15 @@ using lab4.Models.Enums;
 
 namespace lab4.Models;
 
-public class OrderRepository : IOrderRepository
+public sealed class OrderRepository : IOrderRepository
 {
+    private static readonly OrderRepository _orderRepository = new OrderRepository();
+    
     private readonly List<Order> _orders = new();
+    
+    public static OrderRepository Instance => _orderRepository;
+
+    private OrderRepository() { }
     
     public Order? Get(Guid id)
     {

@@ -9,4 +9,5 @@ public interface IMenu
     public IReadOnlyList<Dish> GetOnlyVegetarianDishes();
     public IReadOnlyList<Dish> GetOnlyNoSpicyDishes();
     public IReadOnlyList<Dish> GetDishesByCategory(DishCategory category);
+    public Dish? GetDishById(Guid id);
 }

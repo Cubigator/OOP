@@ -7,6 +7,7 @@ public class Dish
     private decimal _price;
     private decimal _weight;
     
+    public Guid Id { get; set; }
     public string Name { get; set; } = null!;
     public string? Description { get; set; }
     public bool IsVegetarian { get; set; }

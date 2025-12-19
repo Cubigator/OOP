@@ -59,4 +59,10 @@ public class Menu : IMenu
         }
         return buffer;
     }
+
+    public Dish? GetDishById(Guid id)
+    {
+        Dish? dish = _dishes.FirstOrDefault(x => x.Id == id);
+        return dish;
+    }
 }
